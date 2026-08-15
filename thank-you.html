@@ -5,6 +5,25 @@
   <title>Comandă înregistrată — AERIS</title><meta name="description" content="Îți mulțumim. Solicitarea ta de comandă a fost înregistrată.">
   <link rel="stylesheet" href="assets/styles.css">
   <script src="assets/meta-pixel.js"></script>
+  <script>
+    try {
+      if (sessionStorage.getItem('aeris_order_submitted') === '1' && sessionStorage.getItem('aeris_purchase_sent') !== '1') {
+        fbq('track', 'Purchase', {
+          value: 349,
+          currency: 'RON',
+          content_name: 'AERIS ONE',
+          content_type: 'product',
+          content_ids: ['AERIS-ONE'],
+          contents: [{id: 'AERIS-ONE', quantity: 1}],
+          num_items: 1
+        });
+        sessionStorage.setItem('aeris_purchase_sent', '1');
+        sessionStorage.removeItem('aeris_order_submitted');
+      }
+    } catch (error) {
+      /* The confirmation page remains usable when browser storage is disabled. */
+    }
+  </script>
   <script src="https://offers.adricenetwork.com/trk.min.js" async defer></script>
 </head>
 <body style="padding-bottom:0">

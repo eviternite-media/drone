@@ -33,7 +33,8 @@ instalat pe pagina principala, formular si pagina de multumire. Urmeaza pasii
 din META-PIXEL-SETUP.txt pentru conectarea sursei Meta in Adrice.
 
 Meta Pixel 1576911387464284 este instalat pe toate paginile. Browserul trimite
-PageView, ViewContent si InitiateCheckout. Eventul final Lead trebuie trimis
+PageView, ViewContent, InitiateCheckout si Purchase. Purchase foloseste valoarea
+reala 349 RON si este declansat numai dupa formular. Eventul Lead poate fi trimis
 server-side de Adrice prin Conversions API.
 
 IMPORTANT

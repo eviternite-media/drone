@@ -3,7 +3,8 @@ META PIXEL + CONVERSIONS API — AERIS ONE
 
 CE ESTE DEJA INSTALAT PE SITE
 - Meta Pixel ID 1576911387464284, acelasi dataset folosit pentru smartwatch.
-- PageView pe toate paginile, ViewContent pe produs si InitiateCheckout pe formular.
+- PageView pe toate paginile, ViewContent pe produs, InitiateCheckout pe formular
+  si Purchase pe pagina thank-you dupa trimiterea reala a formularului.
 - Scriptul Adrice trk.min.js pe index.html, order.html si thank-you.html.
 - Pixelul de impresie Adrice pentru offer 2713, uid-ul tau si lp 2746.
 - Formularul API Adrice si redirectarea la thank-you.html dupa comanda.
@@ -37,13 +38,19 @@ PASUL 3 — CONECTEAZA PIXELUL IN ADRICE
 PASUL 4 — TESTARE
 1. In Meta Events Manager deschide Test events.
 2. Deschide https://www.romaniandrone.store/ intr-o fereastra incognito.
-3. Trimite o singura comanda de test valida, apoi verifica aparitia eventului Lead.
-4. Verifica sa existe un singur event server, nu doua conversii duplicate.
+3. Trimite o singura comanda de test valida si verifica PageView, ViewContent,
+   InitiateCheckout si Purchase.
+4. Dupa conectarea Adrice CAPI, verifica si eventul server Lead.
 
 DESPRE PURCHASE
-Foloseste Purchase numai cand comanda este confirmata ca vanzare. Daca Adrice
-permite trigger pe Approved/Confirmed, alege acel status. Valoarea reala a
-produsului este 349 RON; payout-ul afiliatului nu este valoarea comenzii.
+Purchase este trimis din browser numai dupa formular si o singura data in acea
+sesiune. Valoarea folosita este pretul real al comenzii: 349 RON. Valoarea de
+15 EUR din Adrice este payout-ul afiliatului, nu valoarea platita de client.
+
+DESPRE SEARCH
+Eventul Search nu este instalat deoarece site-ul nu contine cautare. Trimiterea
+lui pe o pagina normala ar crea date false in Meta. Daca se adauga ulterior o
+functie reala de cautare, eventul trebuie declansat numai dupa cautarea clientului.
 
 DESPRE SHORT LINK
 https://offers.adricenetwork.com/Ruvjq5K2 este link de tracking, nu cod care

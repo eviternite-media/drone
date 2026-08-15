@@ -52,3 +52,15 @@ document.querySelectorAll('[data-year]').forEach(function (node) {
     // The checkout remains usable when storage is disabled by the browser.
   }
 })();
+
+var checkoutForm = document.querySelector('#orderForm');
+if (checkoutForm) {
+  checkoutForm.addEventListener('submit', function () {
+    try {
+      sessionStorage.setItem('aeris_order_submitted', '1');
+      sessionStorage.removeItem('aeris_purchase_sent');
+    } catch (error) {
+      // Submission continues normally when storage is unavailable.
+    }
+  });
+}
