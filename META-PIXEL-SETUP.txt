@@ -2,6 +2,8 @@ META PIXEL + CONVERSIONS API — AERIS ONE
 ========================================
 
 CE ESTE DEJA INSTALAT PE SITE
+- Meta Pixel ID 1576911387464284, acelasi dataset folosit pentru smartwatch.
+- PageView pe toate paginile, ViewContent pe produs si InitiateCheckout pe formular.
 - Scriptul Adrice trk.min.js pe index.html, order.html si thank-you.html.
 - Pixelul de impresie Adrice pentru offer 2713, uid-ul tau si lp 2746.
 - Formularul API Adrice si redirectarea la thank-you.html dupa comanda.
@@ -9,14 +11,16 @@ CE ESTE DEJA INSTALAT PE SITE
 NU ADAUGA TOKENUL META IN FISIERELE SITE-ULUI.
 Tokenul Conversions API este secret si trebuie introdus numai in Adrice.
 
-PASUL 1 — CREEAZA SURSA META
-1. Deschide Meta Events Manager.
-2. Apasa Connect data / Conecteaza date.
-3. Alege Web si creeaza un Pixel/Dataset pentru Romanian Drone.
-4. Copiaza Pixel ID. Dataset ID si Pixel ID sunt acelasi numar pentru website.
+PASUL 1 — FOLOSESTE DATASETUL EXISTENT
+Nu mai crea o sursa Web noua. Deschide datasetul "smartwatch" cu Pixel ID:
+1576911387464284
+
+In Settings verifica Traffic permissions. Daca folosesti un allow list, adauga:
+romaniandrone.store
+www.romaniandrone.store
 
 PASUL 2 — OBTINE ACCESUL CONVERSIONS API
-1. In Events Manager, deschide sursa Romanian Drone.
+1. In Events Manager, deschide datasetul smartwatch.
 2. Intra la Settings / Setari.
 3. Gaseste Conversions API si alege configurarea manuala sau generarea tokenului.
 4. Copiaza tokenul si pastreaza-l privat.
@@ -24,7 +28,8 @@ PASUL 2 — OBTINE ACCESUL CONVERSIONS API
 PASUL 3 — CONECTEAZA PIXELUL IN ADRICE
 1. Deschide oferta 2713 in Adrice.
 2. In sectiunea Meta conversions API apasa Manage data sources.
-3. Apasa Add new si introdu numele, Pixel ID si tokenul cerut.
+3. Apasa Add new si introdu numele "Romanian Drone", Pixel ID
+   1576911387464284 si tokenul cerut.
 4. Revino la oferta 2713, activeaza sursa si alege eventul Lead.
 5. Pentru formularul trimis, foloseste statusul New/Pending ca trigger.
 6. Lasa Custom purchase value dezactivat pentru eventul Lead si apasa Save.

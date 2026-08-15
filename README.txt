@@ -32,6 +32,10 @@ Pagina index.html include pixelul de impresie Adrice. Scriptul trk.min.js este
 instalat pe pagina principala, formular si pagina de multumire. Urmeaza pasii
 din META-PIXEL-SETUP.txt pentru conectarea sursei Meta in Adrice.
 
+Meta Pixel 1576911387464284 este instalat pe toate paginile. Browserul trimite
+PageView, ViewContent si InitiateCheckout. Eventul final Lead trebuie trimis
+server-side de Adrice prin Conversions API.
+
 IMPORTANT
 Nu modifica valorile ascunse uid, offer, lp sau _key fara un nou cod API generat
 de Adrice. Inainte de lansare, verifica identitatea vanzatorului, detaliile
