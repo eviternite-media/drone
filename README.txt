@@ -37,6 +37,10 @@ PageView, ViewContent, InitiateCheckout si Purchase. Purchase foloseste valoarea
 reala 349 RON si este declansat numai dupa formular. Eventul Lead poate fi trimis
 server-side de Adrice prin Conversions API.
 
+Codul Meta este incarcat din assets/meta-pixel.js, iar fiecare pagina include
+fallback-ul noscript oficial. Nu lipi din nou codul de baza in fisiere deoarece
+ar trimite evenimente PageView duplicate.
+
 IMPORTANT
 Nu modifica valorile ascunse uid, offer, lp sau _key fara un nou cod API generat
 de Adrice. Inainte de lansare, verifica identitatea vanzatorului, detaliile
