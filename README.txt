@@ -8,6 +8,7 @@ CONTINUTUL PACHETULUI
 - shipping.html    informatii despre livrare
 - terms.html       termeni si conditii
 - thank-you.html   confirmarea dupa comanda
+- META-PIXEL-SETUP.txt  pasii pentru Meta Pixel si Conversions API
 - assets/          stiluri, script si imagini optimizate
 
 INSTALARE PE WINDOWS
@@ -23,11 +24,15 @@ PUBLICARE
 Incarca toate fisierele si folderul assets pe server, pastrand aceeasi structura.
 
 CONFIGURARE ADRICE
-In setarile ofertei, selecteaza "Redirect to a custom URL" si introdu adresa
-publica completa a fisierului thank-you.html, de exemplu:
-https://domeniul-tau.ro/thank-you.html
+Formularul din order.html este conectat la oferta 2713 si landing page 2746.
+Dupa trimiterea cu succes, clientul este directionat automat catre:
+https://www.romaniandrone.store/thank-you.html
+
+Pagina index.html include pixelul de impresie Adrice. Scriptul trk.min.js este
+instalat pe pagina principala, formular si pagina de multumire. Urmeaza pasii
+din META-PIXEL-SETUP.txt pentru conectarea sursei Meta in Adrice.
 
 IMPORTANT
-Pagina order.html foloseste linkul de tracking pentru oferta 2713 furnizat in
-captura de ecran. Inainte de lansare, verifica linkul, identitatea vanzatorului,
-detaliile produsului si informatiile legale.
+Nu modifica valorile ascunse uid, offer, lp sau _key fara un nou cod API generat
+de Adrice. Inainte de lansare, verifica identitatea vanzatorului, detaliile
+produsului si informatiile legale.

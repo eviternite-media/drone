@@ -1,0 +1,55 @@
+META PIXEL + CONVERSIONS API — AERIS ONE
+========================================
+
+CE ESTE DEJA INSTALAT PE SITE
+- Scriptul Adrice trk.min.js pe index.html, order.html si thank-you.html.
+- Pixelul de impresie Adrice pentru offer 2713, uid-ul tau si lp 2746.
+- Formularul API Adrice si redirectarea la thank-you.html dupa comanda.
+
+NU ADAUGA TOKENUL META IN FISIERELE SITE-ULUI.
+Tokenul Conversions API este secret si trebuie introdus numai in Adrice.
+
+PASUL 1 — CREEAZA SURSA META
+1. Deschide Meta Events Manager.
+2. Apasa Connect data / Conecteaza date.
+3. Alege Web si creeaza un Pixel/Dataset pentru Romanian Drone.
+4. Copiaza Pixel ID. Dataset ID si Pixel ID sunt acelasi numar pentru website.
+
+PASUL 2 — OBTINE ACCESUL CONVERSIONS API
+1. In Events Manager, deschide sursa Romanian Drone.
+2. Intra la Settings / Setari.
+3. Gaseste Conversions API si alege configurarea manuala sau generarea tokenului.
+4. Copiaza tokenul si pastreaza-l privat.
+
+PASUL 3 — CONECTEAZA PIXELUL IN ADRICE
+1. Deschide oferta 2713 in Adrice.
+2. In sectiunea Meta conversions API apasa Manage data sources.
+3. Apasa Add new si introdu numele, Pixel ID si tokenul cerut.
+4. Revino la oferta 2713, activeaza sursa si alege eventul Lead.
+5. Pentru formularul trimis, foloseste statusul New/Pending ca trigger.
+6. Lasa Custom purchase value dezactivat pentru eventul Lead si apasa Save.
+
+PASUL 4 — TESTARE
+1. In Meta Events Manager deschide Test events.
+2. Deschide https://www.romaniandrone.store/ intr-o fereastra incognito.
+3. Trimite o singura comanda de test valida, apoi verifica aparitia eventului Lead.
+4. Verifica sa existe un singur event server, nu doua conversii duplicate.
+
+DESPRE PURCHASE
+Foloseste Purchase numai cand comanda este confirmata ca vanzare. Daca Adrice
+permite trigger pe Approved/Confirmed, alege acel status. Valoarea reala a
+produsului este 349 RON; payout-ul afiliatului nu este valoarea comenzii.
+
+DESPRE SHORT LINK
+https://offers.adricenetwork.com/Ruvjq5K2 este link de tracking, nu cod care
+trebuie pus in formular. In captura Adrice, Your landing page este N/A. Nu folosi
+acest short link in reclama pana cand setezi romaniandrone.store ca landing page
+in Adrice si generezi/verifici din nou linkul. Pentru reclama poti folosi direct:
+https://www.romaniandrone.store/
+
+PARAMETRI RECOMANDATI IN META ADS
+In campul URL parameters al reclamei poti introduce:
+utm_source=facebook&utm_medium=paid_social&utm_campaign={{campaign.name}}&utm_content={{ad.name}}&subid={{ad.id}}&subid2={{adset.id}}&subid3={{campaign.id}}
+
+Site-ul pastreaza automat acesti parametri cand vizitatorul trece de la pagina
+principala la formular si ii trimite impreuna cu comanda catre Adrice.
