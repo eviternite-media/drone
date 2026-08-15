@@ -1,0 +1,3 @@
+document.querySelectorAll('[data-menu]').forEach(function(button){button.addEventListener('click',function(){var nav=document.querySelector('.nav');nav.classList.toggle('open');document.body.classList.toggle('menu-open');button.setAttribute('aria-expanded',nav.classList.contains('open'))})});
+document.querySelectorAll('.nav a').forEach(function(link){link.addEventListener('click',function(){document.querySelector('.nav')?.classList.remove('open');document.body.classList.remove('menu-open')})});
+document.querySelectorAll('[data-year]').forEach(function(node){node.textContent=new Date().getFullYear()});
